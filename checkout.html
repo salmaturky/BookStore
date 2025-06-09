@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الدفع</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="cart.html">عربة التسوق</a>
+    <a href="checkout.html">الدفع</a>
+  </nav>
+
+  <section>
+    <h2>معلومات الدفع</h2>
+    <form id="checkout-form">
+      <input type="text" placeholder="الاسم الكامل" id="name" required>
+      <input type="text" placeholder="العنوان" id="address" required>
+      <input type="tel" placeholder="رقم الهاتف" id="phone" required>
+      <button type="submit">إرسال الطلب</button>
+    </form>
+    <p id="confirmation-message"></p>
+  </section>
+
+  <footer>© 2025 متجر الكتب</footer>
+
+</body>
+</html>
