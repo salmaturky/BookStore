@@ -1,30 +1,59 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>متجر الكتب</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <title>متجر الكتب</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-  <div id="loader">جاري التحميل...</div>
+    <div id="loader">جاري التحميل...</div>
 
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="cart.html">عربة التسوق</a>
-    <a href="checkout.html">الدفع</a>
-  </nav>
+    <nav>
+        <a href="home.html">الرئيسية</a>
+        <a href="cart.html">عربة التسوق</a>
+        <a href="checkout.html">الدفع</a>
+        <a href="about.html">من نحن</a> </nav>
 
-  <section>
-    <h1>مرحباً!</h1>
-    <p>مرحباً بك 💙</p>
-  </section>
+    <section>
+        <h1>💙مرحباً بك في متجر الكتب💙</h1>
+    </section>
 
-  <section id="products-container"></section>
+    <div class="filters-sort-container">
+        <div class="filter-group">
+            <label for="category-filter">التصنيف:</label>
+            <select id="category-filter">
+                <option value="all">الكل</option>
+                </select>
+        </div>
 
-  <footer>© 2025 متجر الكتب</footer>
+        <div class="filter-group">
+            <label for="price-range-min">السعر من:</label>
+            <input type="number" id="price-range-min" placeholder="الحد الأدنى" min="0">
+        </div>
+        <div class="filter-group">
+            <label for="price-range-max">السعر إلى:</label>
+            <input type="number" id="price-range-max" placeholder="الحد الأقصى" min="0">
+        </div>
+        
+        <div class="filter-group">
+            <label for="sort-by">الترتيب حسب:</label>
+            <select id="sort-by">
+                <option value="default">افتراضي</option>
+                <option value="price-asc">السعر: من الأقل للأعلى</option>
+                <option value="price-desc">السعر: من الأعلى للأقل</option>
+                <option value="name-asc">الاسم: أ-ي</option>
+                <option value="name-desc">الاسم: ي-أ</option>
+            </select>
+        </div>
+        <button id="apply-filters-sort">تطبيق</button>
+    </div>
+
+    <section id="products-container"></section>
+
+    <footer>©️ 2025 متجر الكتب</footer>
 
 </body>
 </html>

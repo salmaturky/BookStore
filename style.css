@@ -1,162 +1,243 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background:
-    url('images/clouds.png') no-repeat center top fixed,
-    linear-gradient(to bottom, #cce7ff, #e6f2ff);
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  color: #003366;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background:
+        url('images/clouds.png') no-repeat center top fixed,
+        linear-gradient(to bottom, #cce7ff, #e6f2ff);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: #003366;
 }
 
 nav {
-  background: #0099ff;
-  color: white;
-  padding: 10px;
-  text-align: center;
+    background: #0099ff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 nav a {
-  color: white;
-  margin: 10px;
-  text-decoration: none;
-  font-size: 18px;
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 section {
-  padding: 20px;
-  text-align: center;
+    padding: 20px;
+    text-align: center;
 }
 
 footer {
-  background: #0077cc;
-  color: white;
-  padding: 10px;
-  text-align: center;
+    background: #0077cc;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
 }
 
 #products-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .product {
-  background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .product img {
-  width: 100%;
-  max-width: 150px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto 15px auto;
-  border-radius: 6px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
+
 .product h3 {
-  margin: 10px 0;
-  font-size: 20px;
+    margin: 10px 0;
+    font-size: 20px;
 }
 
 .product p {
-  margin: 5px 0;
-  font-size: 16px;
-  color: #333;
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.quantity-control button {
+    background-color: #007acc;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.quantity-control span {
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
 }
 
 button {
-  background-color: #3399ff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
+    background-color: #3399ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 button:hover {
-  background-color: #007acc;
+    background-color: #007acc;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 input, textarea {
-  padding: 10px;
-  width: 90%;
-  margin: 10px 0;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 #loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-size: 20px;
 }
 
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  #products-container {
-    grid-template-columns: 1fr;
-  }
-
-  .product {
+.filters-sort-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
     width: 90%;
-    margin: 0 auto;
-  }
-
-  input, textarea, button {
-    width: 95%;
-  }
-
-  .product img {
-    width: 100px;
-    height: 100px;
-  }
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
 }
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filters-sort-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #003366;
+}
+
+.filters-sort-container select,
+.filters-sort-container input[type="number"] {
+    padding: 8px;
+    border: 1px solid #aaddff;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 120px;
+}
+
+.filters-sort-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
 @media (max-width: 768px) {
-  .product img {
-    max-width: 120px;
-  }
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #products-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    input, textarea, button {
+        width: 95%;
+    }
+
+    .product img {
+        max-width: 120px;
+    }
+
+    .filters-sort-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
-  .product img {
-    max-width: 100px;
-  }
+    .product img {
+        max-width: 100px;
+    }
+
+    .filters-sort-container select,
+    .filters-sort-container input[type="number"] {
+        min-width: unset;
+        width: 100%;
+    }
 }
